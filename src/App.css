@@ -1,0 +1,231 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-image: url(../public/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.weatherBox {
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.1); /* 흰색 투명도 조절 */
+  border: 2px solid rgba(255, 255, 255, 0.1); /* 흰색 테두리 투명도 조절 */
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); /* 검정색 투명도 조절 */
+  cursor: pointer;
+}
+
+.weatherContent {
+  width: 20rem;
+  height: 30rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.weatherContent > span {
+  margin-top: 1em;
+}
+
+.weatherContent h1 {
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+
+.weatherBox:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* 흰색 투명도 조절 */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* 흰색 테두리 투명도 조절 */
+}
+.clearBtnGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 4em;
+}
+.clearBtnGroup .clearBtn {
+  width: 5rem;
+  height: 5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 3em;
+  margin: 0 1.5em;
+}
+
+.dayTime {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.weatherDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.weatherDetail span {
+  padding: 15px;
+}
+@media screen and (max-width: 1023px) {
+  .weatherContent {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .clearBtnGroup {
+    flex-wrap: wrap;
+  }
+  .clearBtnGroup .clearBtn {
+    width: 40%;
+    margin-top: 15px;
+  }
+  .container {
+    height: 130vh;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .container {
+    height: 150vh;
+  }
+}
